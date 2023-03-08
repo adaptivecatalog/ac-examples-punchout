@@ -12,15 +12,14 @@ We hope to demonstrate a possible ideal implementation, but so long as you follo
 \
 A user starts from the demo app, clicks the Punchout button, and is directed to Adaptive Catalog.\
 Your app will make a request to Adaptive Catalog to generate a Session using your company name, an Adaptive Catalog API key, and a URL to POST the Workspace payload to.\
-Once in Adaptive Catalog, a user has the opportunity to search and add products to a session Workspace.\ 
+Once in Adaptive Catalog, a user has the opportunity to search and add products to a session Workspace.\
 When the user is done searching and adding products to the workspace, the user clicks "Submit" from the Workspace page.\
 Adaptive Catalog then sends a payload to your application and expects a URL back that it will then redirect to.\
-Your application will need to store that payload, and be able to retrieve it from the URL Adaptive Catalog now redirects the user to.\
+Your application will need to store that payload, and be able to retrieve it from the URL Adaptive Catalog now redirects the user to.
 
 ## Setup
 ### Service
-	For the Service, you will need to update values in the appsettings.json and appsettings.Development.json file under the PunchoutConfigs section.
- ex: 
+For the Service, you will need to update values in the appsettings.json and appsettings.Development.json file under the PunchoutConfigs section.
  ```
  "PunchoutConfigs": {
     "ServiceBaseUrl": "https://localhost:7201",
@@ -32,9 +31,8 @@ Your application will need to store that payload, and be able to retrieve it fro
   }
   ```
 ### Web Client
-	For the Web Client, you will need to update the REACT_APP_URL value in the .env and .env.development files to point to the URL for the Service.\
-	This should match the config for ServiceBaseUrl from the Service config.
-	
+For the Web Client, you will need to update the REACT_APP_URL value in the .env and .env.development files to point to the URL for the Service.\
+This should match the config for ServiceBaseUrl from the Service config.
 ## Application Flow
 ```
 	User ->> 3rd Party App: Request Punchout
