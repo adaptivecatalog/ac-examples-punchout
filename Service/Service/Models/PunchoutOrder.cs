@@ -3,5 +3,5 @@
 public class PunchoutOrder
 {
     public IEnumerable<PunchoutProduct>? Items { get; set; }
-    public string Id { get; set; }
+    public required string Id { get; set; }
 }

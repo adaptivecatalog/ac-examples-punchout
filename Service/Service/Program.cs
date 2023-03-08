@@ -4,7 +4,6 @@ using Service;
 using Service.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddHttpClient();
 builder.Services.Configure<PunchoutConfigs>(builder.Configuration.GetSection("PunchoutConfigs"));
 builder.Services.AddEndpointsApiExplorer();

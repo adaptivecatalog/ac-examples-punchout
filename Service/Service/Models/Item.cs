@@ -6,5 +6,5 @@ public class Item
     public string? Username { get; set; }
     public string? ProductId { get; set; }
     public string? Catalog { get; set; }
-    public string Workspace { get; set; }
+    public required string Workspace { get; set; }
 }
