@@ -2,7 +2,7 @@
 
 
 # Adaptive Catalog JSON Punchout Example App
-Updated 3/8/2023
+Updated 10/23/2026
 
 [Adaptive Catalog](https://adaptivecatalog.com) now supports an exciting extensibility feature we're calling JSON Punchout!\
 \
@@ -31,8 +31,31 @@ For the Service, you will need to update values in the appsettings.json and apps
   }
   ```
 ### Web Client
-For the Web Client, you will need to update the REACT_APP_URL value in the .env and .env.development files to point to the URL for the Service.\
+For the Web Client, you will need to update the VITE_API_URL value in the .env and .env.development files to point to the URL for the Service.\
 This should match the config for ServiceBaseUrl from the Service config.
+
+## Running locally
+### Prerequisites
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org) 22.12 or later (see `Web/.nvmrc`)
+
+### Service
+```
+cd Service/Service
+dotnet run --urls https://localhost:7201
+```
+Swagger UI is available at `https://localhost:7201/swagger` when running in the Development environment.
+
+### Web Client
+```
+cd Web
+npm install
+npm run dev
+```
+The Web Client is built with [Vite](https://vite.dev) and runs on http://localhost:3000, matching WebBaseUrl in the Service config. Use `npm run build` to produce a production build in `Web/build`.
+
+### Docker
+The Service Dockerfile uses the .NET 10 images, which listen on port 8080 by default.
 ## Application Flow
 ```
 	User ->> 3rd Party App: Request Punchout

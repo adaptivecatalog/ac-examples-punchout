@@ -1,6 +1,5 @@
 ﻿import {PrimaryButton, Image} from "@fluentui/react";
 import React from "react";
-// @ts-ignore
 import logo from "../logo.svg"
 import api from "../Service/PunchoutApi";
 const MainPage: React.FC = (props) => {

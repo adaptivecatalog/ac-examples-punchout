@@ -1,6 +1,5 @@
 ﻿import {Image, IColumn, mergeStyleSets, SelectionMode, ShimmeredDetailsList, ImageFit} from "@fluentui/react";
 import React, {useEffect, useState} from "react";
-// @ts-ignore
 import logo from "../logo.svg"
 import api, {IPunchoutProduct} from "../Service/PunchoutApi";
 interface IResultsProps {
