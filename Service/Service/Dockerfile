@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:11.0 AS build
 WORKDIR /src
 COPY ["Service/Service.csproj", "Service/"]
 RUN dotnet restore "Service/Service.csproj"
